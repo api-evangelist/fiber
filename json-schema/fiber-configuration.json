@@ -1,0 +1,144 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/api-evangelist/fiber/json-schema/fiber-configuration.json",
+  "title": "Fiber App Configuration",
+  "description": "JSON Schema for Fiber web framework application configuration (fiber.Config).",
+  "type": "object",
+  "properties": {
+    "Prefork": {
+      "type": "boolean",
+      "default": false,
+      "description": "Enable prefork mode to spawn multiple processes."
+    },
+    "ServerHeader": {
+      "type": "string",
+      "description": "Value for the Server HTTP header."
+    },
+    "StrictRouting": {
+      "type": "boolean",
+      "default": false,
+      "description": "Treat /foo and /foo/ as different routes."
+    },
+    "CaseSensitive": {
+      "type": "boolean",
+      "default": false,
+      "description": "Enable case-sensitive routing."
+    },
+    "Immutable": {
+      "type": "boolean",
+      "default": false,
+      "description": "Return immutable context values."
+    },
+    "UnescapePath": {
+      "type": "boolean",
+      "default": false,
+      "description": "Unescape route path before matching."
+    },
+    "ETag": {
+      "type": "boolean",
+      "default": false,
+      "description": "Enable ETag header generation."
+    },
+    "BodyLimit": {
+      "type": "integer",
+      "default": 4194304,
+      "description": "Maximum request body size in bytes (default 4MB)."
+    },
+    "Concurrency": {
+      "type": "integer",
+      "default": 262144,
+      "description": "Maximum number of concurrent connections."
+    },
+    "ReadTimeout": {
+      "type": "string",
+      "description": "Read timeout duration (e.g., 5s, 1m)."
+    },
+    "WriteTimeout": {
+      "type": "string",
+      "description": "Write timeout duration."
+    },
+    "IdleTimeout": {
+      "type": "string",
+      "description": "Idle connection timeout duration."
+    },
+    "ReadBufferSize": {
+      "type": "integer",
+      "default": 4096,
+      "description": "Per-connection read buffer size in bytes."
+    },
+    "WriteBufferSize": {
+      "type": "integer",
+      "default": 4096,
+      "description": "Per-connection write buffer size in bytes."
+    },
+    "CompressedFileSuffix": {
+      "type": "string",
+      "default": ".fiber.gz",
+      "description": "Suffix for compressed static files."
+    },
+    "ProxyHeader": {
+      "type": "string",
+      "description": "Header to use for proxy IP (e.g., X-Forwarded-For)."
+    },
+    "GETOnly": {
+      "type": "boolean",
+      "default": false,
+      "description": "Reject all non-GET requests."
+    },
+    "DisableKeepalive": {
+      "type": "boolean",
+      "default": false,
+      "description": "Disable keep-alive connections."
+    },
+    "DisableDefaultDate": {
+      "type": "boolean",
+      "default": false,
+      "description": "Disable default Date header."
+    },
+    "DisableDefaultContentType": {
+      "type": "boolean",
+      "default": false,
+      "description": "Disable default Content-Type header."
+    },
+    "DisableHeaderNormalizing": {
+      "type": "boolean",
+      "default": false,
+      "description": "Disable automatic header name normalization."
+    },
+    "DisableStartupMessage": {
+      "type": "boolean",
+      "default": false,
+      "description": "Disable startup banner message."
+    },
+    "AppName": {
+      "type": "string",
+      "description": "Application name."
+    },
+    "StreamRequestBody": {
+      "type": "boolean",
+      "default": false,
+      "description": "Enable streaming request body handling."
+    },
+    "EnableTrustedProxyCheck": {
+      "type": "boolean",
+      "default": false,
+      "description": "Enable trusted proxy checking."
+    },
+    "TrustedProxies": {
+      "type": "array",
+      "items": { "type": "string" },
+      "description": "List of trusted proxy IP addresses/ranges."
+    },
+    "Network": {
+      "type": "string",
+      "enum": ["tcp", "tcp4", "tcp6"],
+      "default": "tcp4",
+      "description": "Network type for the listener."
+    },
+    "EnablePrintRoutes": {
+      "type": "boolean",
+      "default": false,
+      "description": "Print all registered routes on startup."
+    }
+  }
+}

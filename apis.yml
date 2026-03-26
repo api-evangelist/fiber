@@ -19,7 +19,10 @@ apis:
     humanURL: https://gofiber.io/
     tags:
       - Microservices
-    properties: []
+    properties:
+      - type: JSONSchema
+        url: >-
+          https://raw.githubusercontent.com/api-evangelist/fiber/refs/heads/main/json-schema/fiber-configuration.json
 common:
   - type: Website
     url: https://gofiber.io/
