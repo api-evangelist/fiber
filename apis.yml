@@ -24,6 +24,8 @@ apis:
         url: >-
           https://raw.githubusercontent.com/api-evangelist/fiber/refs/heads/main/json-schema/fiber-configuration.json
 common:
+  - type: DomainSecurity
+    url: security/fiber-domain-security.yml
   - type: Website
     url: https://gofiber.io/
 maintainers:
