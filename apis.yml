@@ -47,6 +47,12 @@ apis:
         url: >-
           https://raw.githubusercontent.com/api-evangelist/fiber/refs/heads/main/json-schema/fiber-configuration.json
 common:
+  - type: Plans
+    url: plans/fiber-plans-pricing.yml
+  - type: RateLimits
+    url: rate-limits/fiber-rate-limits.yml
+  - type: FinOps
+    url: finops/fiber-finops.yml
   - type: DomainSecurity
     url: security/fiber-domain-security.yml
   - type: Website
